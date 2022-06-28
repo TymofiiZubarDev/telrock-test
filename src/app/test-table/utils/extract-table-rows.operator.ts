@@ -17,6 +17,7 @@ export function extractTableRowsObject(source$: Observable<TableObject>): Observ
               today: '0',
               monthtd: '0',
               yeartd: '0',
+              colors: ['','','']
             },
           };
         }
@@ -24,6 +25,7 @@ export function extractTableRowsObject(source$: Observable<TableObject>): Observ
           item.kpiAchievementPercent,
           item.kpiTeamName,
           item.kpiPeriod,
+          item.kpiColor,
           tableRowsObject
         );
       });

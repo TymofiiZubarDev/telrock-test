@@ -87,16 +87,4 @@ export class TestTableComponent implements OnInit {
       return { 'light-gray': true };
     } else return { transparent: true };
   };
-
-  public colorCode(dataItemValue: string): SafeStyle {
-    let result = 'lightgreen';
-    const percent = Number(dataItemValue.split(' ')[0]);
-    if (percent < 80) {
-      result = 'yellow';
-    }
-    if (percent < 60) {
-      result = 'orangered';
-    }
-    return this.sanitizer.bypassSecurityTrustStyle(result);
-  }
 }

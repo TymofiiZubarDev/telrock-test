@@ -36,7 +36,7 @@
       [width]="100"
     >
       <ng-template kendoGridCellTemplate let-dataItem>
-        <span [style.color]="colorCode(dataItem.today)">
+        <span [style.color]="dataItem.colors[0]">
           {{ dataItem.today }}
         </span>
       </ng-template>
@@ -48,7 +48,7 @@
       [width]="100"
     >
       <ng-template kendoGridCellTemplate let-dataItem>
-        <span [style.color]="colorCode(dataItem.monthtd)">
+        <span [style.color]="dataItem.colors[1]">
           {{ dataItem.monthtd }}
         </span>
       </ng-template>
@@ -60,7 +60,7 @@
       [width]="100"
     >
       <ng-template kendoGridCellTemplate let-dataItem>
-        <span [style.color]="colorCode(dataItem.yeartd)">
+        <span [style.color]="dataItem.colors[2]">
           {{ dataItem.yeartd }}
         </span>
       </ng-template>

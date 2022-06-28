@@ -30,4 +30,5 @@ export interface TableRow {
   today: string;
   monthtd: string;
   yeartd: string;
+  colors: string[];
 }
