@@ -28,12 +28,6 @@
       class="k-column"
       [width]="200"
     >
-      <ng-template
-        *ngIf="!(isLoading$ | async)"
-        kendoGridFooterTemplate
-        class="table-footer"
-        >Total:
-      </ng-template>
     </kendo-grid-column>
     <kendo-grid-column
       field="today"
