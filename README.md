@@ -1,27 +1,52 @@
 # TestTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
+This project is a table in which you can change the parameters and get information depending on these parameters.
 
-## Development server
+![This is table image](./src/assets/table.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tech Stack
 
-## Code scaffolding
+- Angular
+- Kendo UI
+- RxJs
+- NgRx
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Installation project on your PC
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Fork this repository and create a clone using `git clone` command (or you can download archive and  extract project from it)
+2. Open terminal in the project's folder
+3. Type `npm install` and wait a few minutes while the package installation complete
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running project
 
-## Running end-to-end tests
+1. Open terminal in the project's folder
+2. Type `npm run start` and wait for the compilation complete
+3. Open your browser in unsafe mode (how to run browser in unsafe mod read lower) and type `localhost:4200` in the URL line
+4. (Optional) If app want you to authorize then:
+```
+login: testuser1
+password: Angular11
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## How to open browser in unsafe mode
+- On Windows:<br/>
+    1. Click Win + R
+    2. Write: `your_browser.exe --user-data-dir="C:/Your_browser dev session" --disable-web-security`
+    3. Example: `chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security`
+<br/><br/>
+- On Linux:
+    1. Open terminal
+    2. Write:
+```
+google-chrome --disable-web-security
+```
+- On MacOS: 
+    1. Open terminal
+    2. Write:
+```
+open -a "Google Chrome" --args --disable-web-security --user-data-dir=/tmp/chrome
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
