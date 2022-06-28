@@ -39,14 +39,29 @@
   tr.k-alt.transparent {
     background-color: transparent;
   }
-
+  
   tr {
     font-size: 1.6em;
     color: #e6e6e6 !important;
     line-height: 1.5;
     letter-spacing: 0.025em;
+    &:nth-child(2n+1){
+      background-color: var(--color-light-gray);
+      border: none;
+    }
+    &:nth-child(2n){
+      background-color: transparent;
+    }
     .k-column {
       border: none;
+    }
+  }
+  
+  thead{
+    tr{
+      &:first-child{
+        background-color: transparent;
+      }
     }
   }
 

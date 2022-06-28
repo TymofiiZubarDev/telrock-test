@@ -58,12 +58,6 @@ export class TestTableComponent implements OnInit, OnDestroy {
     });
   }
 
-  public rowClassCallback = (context: RowClassArgs) => {
-    if (context.index % 2 === 0) {
-      return { 'light-gray': true };
-    } else return { transparent: true };
-  };
-
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
