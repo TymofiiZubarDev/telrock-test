@@ -1,0 +1,76 @@
+<div class="wrapper">
+  <app-loader *ngIf="isLoading$ | async"></app-loader>
+  <kendo-toolbar text="External metrics">
+    <custom-drop-down-list
+      [items]="(selectGroupItems$ | async) ?? []"
+      name="selectGroup"
+    ></custom-drop-down-list>
+    <custom-drop-down-list
+      [items]="(selectMeasurementItems$ | async) ?? []"
+      name="selectMeasurement"
+    ></custom-drop-down-list>
+    <kendo-toolbar-button
+      text="Run"
+      themeColor="primary"
+      [disabled]="false"
+      (click)="run()"
+    ></kendo-toolbar-button>
+  </kendo-toolbar>
+  <kendo-grid
+    [data]="tableRows$ | async"
+    [height]="300"
+    scrollable="none"
+    [rowClass]="rowClassCallback"
+  >
+    <kendo-grid-column
+      field="teamName"
+      title="Team Name"
+      class="k-column"
+      [width]="200"
+    >
+      <ng-template
+        *ngIf="!(isLoading$ | async)"
+        kendoGridFooterTemplate
+        class="table-footer"
+        >Total:
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column
+      field="today"
+      title="Today"
+      class="k-column"
+      [width]="100"
+    >
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <span [style.color]="colorCode(dataItem.today)">
+          {{ dataItem.today }}
+        </span>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column
+      field="monthtd"
+      title="MTD"
+      class="k-column"
+      [width]="100"
+    >
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <span [style.color]="colorCode(dataItem.monthtd)">
+          {{ dataItem.monthtd }}
+        </span>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column
+      field="yeartd"
+      title="YTD"
+      class="k-column"
+      [width]="100"
+    >
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <span [style.color]="colorCode(dataItem.yeartd)">
+          {{ dataItem.yeartd }}
+        </span>
+      </ng-template>
+    </kendo-grid-column>
+    <ng-template kendoGridNoRecordsTemplate> </ng-template>
+  </kendo-grid>
+</div>

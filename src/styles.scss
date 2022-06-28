@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500&display=swap");
+
+* {
+  --color-gray: rgba(51, 51, 51, 0.8);
+  --color-light-gray: rgba(51, 51, 51, 0.25);
+  --color-medium-gray: rgba(51, 51, 51, 0.5);
+  --color-dark-gray: rgba(51, 51, 51, 0.9);
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}

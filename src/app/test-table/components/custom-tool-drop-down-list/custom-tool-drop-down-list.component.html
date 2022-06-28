@@ -1,0 +1,16 @@
+<ng-template #toolbarTemplate>
+  <span #toolbarElement>
+    {{ text }}
+    <kendo-dropdownlist
+      #dropdownlist
+      [tabindex]="tabindex"
+      [value]="items[0]"
+      (valueChange)="changeSelectedGroup($event)"
+      [data]="items"
+      index="0"
+      [itemDisabled]="itemDisabled"
+      [popupSettings]="{ popupClass: 'k-popup' }"
+    >
+    </kendo-dropdownlist>
+  </span>
+</ng-template>
