@@ -1,10 +1,10 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-import { environment } from "@env/environment";
-import { DynamicKeysObjectOfStrings, TableObject } from "@test-table/interfaces/test-table.interfaces";
+import { Observable } from 'rxjs';
 
-import { Observable } from "rxjs";
+import { environment } from '@env/environment';
+import { DynamicKeysObjectOfStrings, TableObject } from '@test-table/interfaces/test-table.interfaces';
 
 @Injectable()
 export class TestTableService {

@@ -1,7 +1,7 @@
-import { map, Observable } from "rxjs";
+import { map, Observable } from 'rxjs';
 
-import { TableItem, TableObject, TableRowsObject } from "@test-table/interfaces/test-table.interfaces";
-import { setTeamPercentageForPeriod } from "@test-table/utils/test-table.functions";
+import { TableItem, TableObject, TableRowsObject } from '@test-table/interfaces/test-table.interfaces';
+import { setTeamPercentageForPeriod } from '@test-table/utils/test-table.functions';
 
 export function extractTableRowsObject(source$: Observable<TableObject>): Observable<TableRowsObject> {
   return source$.pipe(

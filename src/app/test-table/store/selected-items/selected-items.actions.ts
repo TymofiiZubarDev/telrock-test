@@ -2,7 +2,7 @@ import { createAction, props } from '@ngrx/store';
 import { DynamicKeysObjectOfStrings } from '@test-table/interfaces/test-table.interfaces';
 
 export enum changeActionTypes {
-  setSelectedItem = '[SET] Selected item',
+  setSelectedItem = '[Test Table] Set Selected item',
 }
 
 export const setSelectedItemAction = createAction(

@@ -1,4 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
+
 import { DynamicKeysObjectOfStrings } from '@test-table/interfaces/test-table.interfaces';
 import { setSelectedItemAction } from '@test-table/store/selected-items/selected-items.actions';
 
@@ -11,11 +12,10 @@ const initialState: DynamicKeysObjectOfStrings = {
 
 export const selectedGroupReducer = createReducer(
   initialState,
-  on(setSelectedItemAction, (state, data: DynamicKeysObjectOfStrings) => {
-    let { type, ...newData } = data;
+  on(setSelectedItemAction, (state, { type, ...dynamicKeysAndValues }: DynamicKeysObjectOfStrings) => {
     return {
       ...state,
-      ...newData,
+      ...dynamicKeysAndValues,
     };
   })
 );
